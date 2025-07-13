@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supermarket</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <script defer src="app.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="text-center">
+    <h1 class="display-4 fw-bold text-primary mb-4">
+        Add Product.
+    </h1>
+
+    <form id="form" onsubmit="addProductToTable(event)" class="p-4 bg-white shadow rounded-4 w-75 mx-auto text-start">
+        <label class="form-label fw-bold">Product name:</label>
+        <input id="productName" required class="form-control mb-3 shadow-sm">
+        <br><br>
+
+        <label class="form-label fw-bold">Price:</label>
+        <input id="price" type="number" required min="0" class="form-control mb-3 shadow-sm">
+        <br><br>
+
+        <select id="selectOption" class="form-label fw-bold" required>
+            <option value="" disabled selected>Select a category</option>
+            <option value="Drinks">Drinks</option>
+            <option value="Meat">Meat</option>
+            <option value="Dairy">Dairy</option>
+            <option value="Snacks">Snacks</option>
+            <option value="Basic">Basic</option>
+        </select>
+        <br><br>
+
+        <label class="form-label fw-bold">Image Url:</label>
+        <input id="image" type="url" required class="form-control mb-4 shadow-sm">
+        <br><br>
+
+        <button class="btn btn-lg btn-success w-100 fw-bold shadow">Add Product</button>
+    </form>
+
+    <h2 class="mt-5 text-dark fw-bold">
+        My Cart:
+    </h2>
+
+    <table class="table table-bordered table-striped table-hover w-75 mx-auto shadow-sm bg-white mt-3">
+        <thead class="table-info">
+            <tr>
+                <th>Product name:</th>
+                <th>Price:</th>
+                <th>Category:</th>
+                <th>Image:</th>
+                <th>Actions:</th>
+            </tr>
+        </thead>
+
+        <tbody id="tBody">
+            
+        </tbody>
+    </table>
+</body>
+
+</html>

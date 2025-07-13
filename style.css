@@ -1,0 +1,8 @@
+body {
+    background: linear-gradient(120deg, #f8f9fa, #dbeafe);
+    min-height: 100vh;
+}
+td > img{
+    width: 150px;
+    height: 150px;
+}
